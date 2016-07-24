@@ -2,11 +2,14 @@
 
     'use strict'
 
-    new Vue({
+    window.app = new Vue({
         el: "#app",
 
         data: {
-            data: []
+            data: [],
+            selectedCountry: null,
+            selectedSite: null,
+            sites: [],
         },
 
         methods: {
@@ -17,22 +20,32 @@
             onFail: function (xhr, errorType, err) {
                 // on fail...
             },
+
+            onSelectCountry: function () {
+                this.sites = this.grouped_data[this.selectedCountry].map(function (data) {
+                    return { text: data.SiteName, value: data.SiteName }
+                })
+                this.selectedSite = this.sites[0].text
+            }
         },
 
         computed: {
+            countries: function () {
+                return Object.keys(this.grouped_data).map(function (data) {
+                    return { text: data, value: data }
+                })
+            },
+
             grouped_data: function () {
                 let data = {}
-
                 for (var i = this.data.length - 1; i >= 0; i--) {
                     let obj = this.data[i]
-
                     if (data[obj.County] === undefined) {
                         data[obj.County] = [obj]
+                    } else {
+                        data[obj.County].push(obj)
                     }
-
-                    data[obj.County].push(obj)
                 }
-
                 return data
             }
         },

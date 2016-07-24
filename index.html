@@ -9,6 +9,14 @@
 </head>
 <body id="app">
 
+<select v-model="selectedCountry" v-on:change="onSelectCountry">
+  <option v-for="country in countries" v-bind:value="country.value">{{ country.text }}</option>
+</select>
+
+<select v-model="selectedSite">
+  <option v-for="site in sites" v-bind:value="site.value">{{ site.text }}</option>
+</select>
+
 <div v-for="(country, data) in grouped_data">
   <div>{{ country }}</div>
   <ul v-for="d in data">
