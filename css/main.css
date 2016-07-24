@@ -1,0 +1,39 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zhongliangge\/Code\/Github\/airfrog\/sass\/main\.scss}line{font-family:\000031}}
+.container {
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zhongliangge\/Code\/Github\/airfrog\/sass\/_mobile\.scss}line{font-family:\000032}}
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zhongliangge\/Code\/Github\/airfrog\/sass\/_mobile\.scss}line{font-family:\000035}}
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zhongliangge\/Code\/Github\/airfrog\/sass\/_mobile\.scss}line{font-family:\000038}}
+  .container {
+    width: 1170px;
+  }
+}
+@media (max-width: 767px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zhongliangge\/Code\/Github\/airfrog\/sass\/_mobile\.scss}line{font-family:\0000311}}
+  .container {
+    width: 100%;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zhongliangge\/Code\/Github\/airfrog\/sass\/main\.scss}line{font-family:\000037}}
+div {
+  box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zhongliangge\/Code\/Github\/airfrog\/sass\/main\.scss}line{font-family:\0000311}}
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}

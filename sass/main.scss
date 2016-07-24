@@ -1,0 +1,21 @@
+.container {
+	margin: 0 auto;
+}
+@import "_mobile.scss";
+
+// General
+div {
+	box-sizing: border-box;
+}
+.clearfix {
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+}
+
+.locate {
+	.locate {
+
+	}
+}
