@@ -7,8 +7,14 @@
   <link rel="stylesheet" href="css/main.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
-<body>
+<body id="app">
 
+<div v-for="(country, data) in grouped_data">
+  <div>{{ country }}</div>
+  <ul v-for="d in data">
+    <li>{{ d.SiteName }}站細懸浮微粒濃度: {{ d['PM2.5'] }} μg/m3</li>
+  </ul>
+</div>
 
 <script src="scripts/vue.min.js"></script>
 <script src="scripts/zepto.min.js"></script>
