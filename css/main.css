@@ -1,4 +1,21 @@
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zhongliangge\/Code\/Github\/airfrog\/sass\/main\.scss}line{font-family:\000031}}
+html {
+  height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zhongliangge\/Code\/Github\/airfrog\/sass\/main\.scss}line{font-family:\000034}}
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zhongliangge\/Code\/Github\/airfrog\/sass\/main\.scss}line{font-family:\0000310}}
+.lv-1 {
+  background-image: linear-gradient(#61b351, #77cc66);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zhongliangge\/Code\/Github\/airfrog\/sass\/main\.scss}line{font-family:\0000313}}
 .container {
   margin: 0 auto;
 }
@@ -27,13 +44,25 @@
     width: 100%;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zhongliangge\/Code\/Github\/airfrog\/sass\/main\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zhongliangge\/Code\/Github\/airfrog\/sass\/main\.scss}line{font-family:\0000319}}
 div {
   box-sizing: border-box;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zhongliangge\/Code\/Github\/airfrog\/sass\/main\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zhongliangge\/Code\/Github\/airfrog\/sass\/main\.scss}line{font-family:\0000323}}
 .clearfix:before, .clearfix:after {
   content: "";
   display: table;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zhongliangge\/Code\/Github\/airfrog\/sass\/main\.scss}line{font-family:\0000329}}
+.locate {
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zhongliangge\/Code\/Github\/airfrog\/sass\/main\.scss}line{font-family:\0000332}}
+.locate .locate-select select {
+  border: 1px solid #FFF;
+  border-radius: 12px;
+  background: transparent;
+  color: #FFF;
 }
