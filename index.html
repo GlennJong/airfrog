@@ -7,10 +7,14 @@
   <link rel="stylesheet" href="css/main.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
+<div class="section-demo">
+  <canvas id="demo"></canvas>
+</div>
+
 <body class="lv-1">
 	<div class="container locate">
 		<h2>其他位置</h2>
-		<div class="locate-select">
+		<div class="locate__select">
 			<select name="" id="">
 				<option value="">option1</option>
 				<option value="">option2</option>
@@ -22,9 +26,11 @@
 				<option value="">option3</option>
 			</select>
 		</div>
-		<div class="locate-map">
-			<svg></svg>
-			<h3 class="locate-name">台北市</h3>
+		<div class="locate__map">
+			<svg class="locate__map__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="433.729px" height="431.417px" viewBox="0 0 433.729 431.417" enable-background="new 0 0 433.729 431.417" xml:space="preserve">
+				<polygon fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" points="251.302,2.499 277.153,30.207 293.813,80.468 375.885,105.577 385.15,175.491 411.775,175.491 431.824,198.866 411.287,227.485 396.351,259.78 388.884,367.274 405.686,394.491 431.69,394.491 431.824,419.132 400.085,429.888 237.66,410.995 178.447,373.544 70.591,390.292 2.423,370.247 26.693,335.454 48.44,324.272 78.968,273.216 71.935,260.681 89.578,230.922 116.78,217.203 156.041,143.013 142.445,140.219 146.179,108.402 178.447,106.496 155.513,78.472 196.587,39.257 232.059,35.518 "/>
+			</svg>
+			<h3 class="locate__map__name">台北市</h3>
 		</div>
 		<button class="button return">返回我的位置</button>
 	</div>
@@ -34,6 +40,7 @@
 <script src="scripts/zepto.callbacks.min.js"></script>
 <script src="scripts/zepto.deferred.min.js"></script>
 <script src="scripts/main.js"></script>
+<script src="scripts/bubble.js"></script>
 
 </body>
 </html>

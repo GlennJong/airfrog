@@ -1,3 +1,7 @@
+@import "compass/css3";
+@import "_mobile.scss";
+
+
 html {
 	height: 100%;
 }
@@ -9,12 +13,17 @@ body {
 // Level color
 .lv-1 {
 	background-image: linear-gradient(#61B351, #77CC66);
+	.button {
+		color: #61B351;
+	}
 }
 .container {
-	margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform (translate(-50%,-50%));
+	text-align: center;
 }
-@import "_mobile.scss";
-
 // General
 div {
 	box-sizing: border-box;
@@ -25,18 +34,38 @@ div {
 		display: table;
 	}
 }
-
+button {
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+}
+// Buttom
+.button {
+	border-radius: 4px;
+	padding: 8px 16px;
+	background: #FFF;
+}
 .locate {
-	text-align: center;
-	.locate-select {
+	color: #FFF;
+	.locate__select {
 		select {
-			border: 1px solid #FFF;
-			border-radius: 12px;
+			-webkit-appearance: none;
+			border: 2px solid #FFF;
+			border-radius: 4px;
+			padding: 8px 16px;
 			background: transparent;
-			color: #FFF;	
+			font-size: 20px;
+			color: #FFF;
+			cursor: pointer;
 		}
 	}
-	.locate-map {
+	.locate__map {
+		margin: 24px 0px;
+		.locate__map__svg {
 
+		}
+		.locate__map__name {
+
+		}
 	}
 }
