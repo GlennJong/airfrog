@@ -1,7 +1,10 @@
 @import "compass/css3";
 @import "_mobile.scss";
 
-
+$lv1: #61B351, #77CC66;
+$lv2: #D9C141, #DEC862;
+$lv3: #CC6666, #E68F8F;
+$lv4: #9966CC;
 html {
 	height: 100%;
 }
@@ -10,9 +13,13 @@ body {
 	width: 100%;
 	height: 100%;
 }
+// Remove defalt style
+a {
+	text-decoration: none;
+}
 // Level color
 .lv-1 {
-	background-image: linear-gradient(#61B351, #77CC66);
+	background-image: linear-gradient($lv1);
 	.button {
 		color: #61B351;
 	}
@@ -46,6 +53,7 @@ button {
 	background: #FFF;
 }
 .locate {
+	display: none;
 	color: #FFF;
 	.locate__select {
 		select {
@@ -67,5 +75,221 @@ button {
 		.locate__map__name {
 
 		}
+	}
+}
+@keyframes floating {
+	form {
+		@include transform(translate(0,0));
+	}
+	to {
+		@include transform(translate(0, 6px));
+	}
+}
+@keyframes wave {
+	form {
+		@include transform(scale(1,1));
+		opacity: 1;
+	}
+	to {
+		@include transform(scale(3,3));
+		opacity: 0;
+	}
+}
+.air {
+	h1 {
+		font-size: 36px;
+		color: #FFF;
+	}
+	.air__frog {
+		.air__frog__talk {
+			position: relative;
+			border-radius: 12px;
+			margin: 0 auto;
+			padding: 8px 16px;
+			width: 240px;
+			background: #FFF;
+			font-size: 16px;
+			color: hsla(0,0%,35%,1);
+			p {
+				line-height: 1.5em;
+				text-align: left;
+			}
+			a.air__frog__talk__info {
+				position: absolute;
+				right: 12px;
+				bottom: 12px;
+				border: 2px solid hsla(0,0%,35%,1);
+				border-radius: 50%;
+				padding: 3px;
+				width: 14px;
+				height: 14px;
+				font-weight: bold;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: -20px;
+				left: 50%;
+				margin-left: -5px;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+				border-top: 20px solid #FFF;
+			}
+		}
+		.air__frog__main {}
+	}
+	.air__locate {
+		a.air__locate__button {
+			display: block;
+			position: relative;
+			margin: 0 auto;
+			width: 60px;
+			span {
+				display: block;
+				position: relative;
+				border: 20px solid #FFF;
+				border-radius: 50%;
+				width: 60px;
+				height: 60px;
+				box-sizing: border-box;
+				animation: floating 2s ease-in-out 0s infinite alternate;
+				&::before {
+					content: '';
+					position: absolute;
+					bottom: -36px;
+					left: 0px;
+					border-left: 10px solid transparent;
+					border-right: 10px solid transparent;
+					border-top: 20px solid #FFF;
+				}
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: -24px;
+				left: 50%;
+				border: 1px solid #FFF;
+				border-radius: 50%;
+				margin-left: -6px;
+				width: 10px;
+				height: 4px;
+				// @include animation(wave 1s ease-out 0s infinite);
+				animation: wave 1s ease-out 0s infinite;
+			}
+		}
+		p.air__locate__name {
+			margin-top: 36px;
+			color: #FFF;
+		}
+	}
+	.air__modal {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		padding: 70px;
+		background: #FFF;
+		box-shadow: 0px 4px 12px hsla(0,0%,0%,.5);
+		@include transform(translate(-50%, -50%));
+		.air__modal__clock {
+
+		}
+		.air__modal__info {
+			section {
+				label {
+					i {}
+				}
+				p {}
+			}
+		}
+	}
+	.clock {
+		position: relative;
+		margin: 12px auto;
+		border: 20px solid #FFF;
+		border-radius: 50%;
+		width: 160px;
+		height: 160px;
+		box-shadow: 0px 0px 12px hsla(0,0%,0%,.5);
+		box-sizing: content-box;
+		overflow: hidden;
+		.clock__block {
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				box-shadow: inset 0px 0px 12px hsla(0,0%,0%,.5);
+				z-index: 1;
+			}
+			& > div {
+				position: absolute;
+				width: 80px;
+				height: 80px;
+			}
+			.clock__block__lv1 {
+				top: 0;
+				right: 0;
+				background-image: linear-gradient(-45deg, $lv1);
+			}
+			.clock__block__lv2 {
+				bottom: 0;
+				right: 0;
+				background-image: linear-gradient(45deg, $lv2);
+			}
+			.clock__block__lv3 {
+				bottom: 0;
+				left: 0;
+				background-image: linear-gradient(135deg, $lv3);
+			}
+			.clock__block__lv4 {
+				top: 0;
+				left: 0;
+				background-color: $lv4;
+			}
+		}
+		.clock__arrow {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			animation: test 5s linear 0s infinite;
+			span {
+				display: block;
+				position: absolute;
+				top: 20px;
+				left: 50%;
+				margin-left: -10px;
+				border-radius: 50% 50% 50% 50%/80% 80% 20% 20%;
+				width: 20px;
+				height: 80px;
+				background-color: #FFF;
+				box-shadow: 0px 0px 12px hsla(0,0%,0%,.5);
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				@include transform(translate(-50%,-50%));
+				border-radius: 50%;
+				width: 60px;
+				height: 60px;
+				background-color: #FFF;
+				box-shadow: 0px 0px 12px hsla(0,0%,0%,.5);
+				z-index: 1;
+			}
+		}
+	}
+}
+@keyframes test {
+	from {
+		@include transform(rotate(0deg));
+	}
+	to {
+		@include transform(rotate(360deg));
 	}
 }

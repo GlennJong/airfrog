@@ -7,9 +7,7 @@
   <link rel="stylesheet" href="css/main.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
-<div class="section-demo">
-  <canvas id="demo"></canvas>
-</div>
+<canvas id="bubble"></canvas>
 
 <body class="lv-1">
 	<div class="container locate">
@@ -33,6 +31,75 @@
 			<h3 class="locate__map__name">台北市</h3>
 		</div>
 		<button class="button return">返回我的位置</button>
+	</div>
+	<div class="container air">
+		<h1 class="air__welcome">嗨，今天空氣如何？</h1>
+		<div class="air__frog">
+			<div class="air__frog__talk">
+				<p>今天空氣不錯，適合出遊，別宅在家了！</p>
+				<a class="air__frog__talk__info" href="">i</a>
+			</div>
+			<div class="air__frog__main">
+				<svg></svg>
+			</div>
+			<h1 class="air__forg__title">良好</h1>
+		</div>
+		<div class="air__locate">
+			<a href="" class="air__locate__button">
+				<span class="pin"></span>
+			</a>
+			<p class="air__locate__name">
+				台中市 忠明站
+			</p>
+		</div>
+		<button class="button return">返回我的位置</button>
+
+		<!-- modal -->
+		<div class="air__modal">
+			<h1>空氣品質怎麼看？</h1>
+			<div class="air__modal__clock clock">
+				<div class="clock__block">
+					<div class="clock__block__lv1"></div>
+					<div class="clock__block__lv2"></div>
+					<div class="clock__block__lv3"></div>
+					<div class="clock__block__lv4"></div>
+				</div>
+				<div class="clock__arrow">
+					<span></span>
+				</div>
+			</div>
+			<p>PM2.5 濃度指標為<strong>11</strong>(μg/m3)</p>
+			<div class="air__modal__info">
+				<section>
+					<label for="">
+						<i class="lv1-color"></i>
+						0 - 35
+					</label>
+					<p>可正常戶外活動。</p>
+				</section>
+				<section>
+					<label for="">
+						<i class="lv1-color"></i>
+						0 - 35
+					</label>
+					<p>可正常戶外活動。</p>
+				</section>
+				<section>
+					<label for="">
+						<i class="lv1-color"></i>
+						0 - 35
+					</label>
+					<p>可正常戶外活動。</p>
+				</section>
+				<section>
+					<label for="">
+						<i class="lv1-color"></i>
+						0 - 35
+					</label>
+					<p>可正常戶外活動。</p>
+				</section>
+			</div>
+		</div>
 	</div>
 
 <script src="scripts/vue.min.js"></script>

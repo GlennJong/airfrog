@@ -9,8 +9,8 @@ var rint = 60;
 $(document).ready(function(){
   WIDTH = window.innerWidth;
   HEIGHT = window.innerHeight;
-  $('#container').width(WIDTH).height(HEIGHT);
-  canvas = document.getElementById('demo');
+  $('body').width(WIDTH).height(HEIGHT);
+  canvas = document.getElementById('bubble');
   $(canvas).attr('width', WIDTH).attr('height',HEIGHT);
   con = canvas.getContext('2d');
   for(var i = 0; i < 10; i++) {
