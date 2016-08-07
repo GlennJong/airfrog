@@ -183,6 +183,7 @@ button {
 		}
 	}
 	.air__modal {
+		display: none;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -190,15 +191,51 @@ button {
 		background: #FFF;
 		box-shadow: 0px 4px 12px hsla(0,0%,0%,.5);
 		@include transform(translate(-50%, -50%));
-		.air__modal__clock {
-
+		h2 {
+			color: hsla(0,0%,35%,1);
+		}
+		.air__modal__clock {}
+		.air__modal__title {
+			color: hsla(0,0%,35%,1);
+			strong {
+				font-size: 36px;
+			}
 		}
 		.air__modal__info {
 			section {
+				margin: 12px 0px;
+				width: 400px;
+				text-align: left;
+				color: hsla(0,0%,35%,1);
+				overflow: hidden;
 				label {
-					i {}
+					font-size: 18px;
+					i {
+						display: inline-block;
+						width: 18px;
+						height: 18px;
+						&.lv1-color {
+							background-image: linear-gradient($lv1);
+						}
+						&.lv2-color {
+							background-image: linear-gradient($lv2);
+						}
+						&.lv3-color {
+							background-image: linear-gradient($lv3);
+						}
+						&.lv4-color {
+							background-color: ($lv4);
+						}
+					}
 				}
-				p {}
+				p {
+					float: right;
+					margin: 0;
+					margin-left: 12px;
+					width: 300px;
+					line-height: 24px;
+					font-size: 18px;
+				}
 			}
 		}
 	}
