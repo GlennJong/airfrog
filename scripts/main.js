@@ -10,6 +10,7 @@
             selectedCountry: null,
             selectedSite: null,
             sites: [],
+            modalOpened: false,
         },
 
         methods: {
@@ -26,7 +27,19 @@
                     return { text: data.SiteName, value: data.SiteName }
                 })
                 this.selectedSite = this.sites[0].text
-            }
+            },
+
+            reset: function () {
+                this.selectedSite = null
+            },
+
+            openModal: function () {
+                this.modalOpened = true
+            },
+
+            closeModal: function () {
+                this.modalOpened = false
+            },
         },
 
         computed: {
