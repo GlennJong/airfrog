@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/main.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
-<body id="app" class="lv-1">
+<body id="app" :class="bodyClass">
 
 <!-- <canvas id="bubble"></canvas> -->
 
@@ -89,7 +89,7 @@
       <option v-for="country in countries" v-bind:value="country.value">{{ country.text }}</option>
     </select>
 
-    <select v-model="selectedSiteName">
+    <select v-model="selectedSiteName" v-on:change="onSelectSite">
       <option v-for="site in sites" v-bind:value="site.value">{{ site.text }}</option>
     </select>
   </div>

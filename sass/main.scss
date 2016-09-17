@@ -24,6 +24,28 @@ a {
 		color: #61B351;
 	}
 }
+
+.lv-2 {
+	background-image: linear-gradient($lv2);
+	.button {
+		color: #61B351;
+	}
+}
+
+.lv-3 {
+	background-image: linear-gradient($lv3);
+	.button {
+		color: #61B351;
+	}
+}
+
+.lv-4 {
+	background-color: $lv4;
+	.button {
+		color: #61B351;
+	}
+}
+
 .container {
 	position: absolute;
 	top: 50%;
