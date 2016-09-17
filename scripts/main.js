@@ -7,8 +7,8 @@
 
         data: {
             data: [],
-            selectedCountry: null,
-            selectedSite: null,
+            selectedCountryName: null,
+            selectedSiteName: null,
             sites: [],
             modalOpened: false,
         },
@@ -23,14 +23,14 @@
             },
 
             onSelectCountry: function () {
-                this.sites = this.grouped_data[this.selectedCountry].map(function (data) {
+                this.sites = this.grouped_data[this.selectedCountryName].map(function (data) {
                     return { text: data.SiteName, value: data.SiteName }
                 })
-                this.selectedSite = this.sites[0].text
+                this.selectedSiteName = this.sites[0].text
             },
 
             reset: function () {
-                this.selectedSite = null
+                this.selectedSiteName = null
             },
 
             openModal: function () {
